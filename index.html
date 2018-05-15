@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Таблица умножения</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="timer.js"></script>
+</head>
+<body>
+	<div class="settings">
+		<h3>Settings</h3>
+		<ul>
+			<label><li><input type="checkbox" checked id="two">2</li></label>
+			<label><li><input type="checkbox" id="three">3</li></label>
+			<label><li><input type="checkbox" id="four">4</li></label>
+			<label><li><input type="checkbox" id="five">5</li></label>
+			<label><li><input type="checkbox" id="six">6</li></label>
+			<label><li><input type="checkbox" id="seven">7</li></label>
+			<label><li><input type="checkbox" id="eight">8</li></label>
+			<label><li><input type="checkbox" id="nine">9</li></label>
+		</ul>
+	</div>
+
+	<div class="userProfil">
+		<ul>
+			<p style="color: red;">Профиль на разработке!!!</p>
+			<li>User Name</li>
+			<li>Очко:&nbsp;<span class="ball">120000</span></li><br>
+			<li><button class="clearBall">Обнулить бал</button></li>
+		</ul>
+	</div>
+	<!-- Таймер -->
+	<h2 class="timer"><span id='timer'>10</span></h2>
+	<!-- Выводить таблицу умножение -->
+	<h1 class="tablisaUmnojenie">
+		<span id="mnojimoe"></span>&nbsp;x&nbsp;<span id="mnojitel"></span>&nbsp;=&nbsp;<span id ="result">?</span>
+	</h1>
+	<div class="answer">
+		<ul>
+			<li><span class="answerCircle">20</span></li>
+			<li><span class="answerCircle">53</span></li>
+			<li><span class="answerCircle">12</span></li>
+			<li><span class="answerCircle">45</span></li>
+		</ul>
+	</div>
+	<script src='index.js'></script>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
