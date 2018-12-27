@@ -6,23 +6,28 @@ var app = new Vue({
 		rightOperand: 1,
 		leftOperand: 2,
 		result: '?',
-		leftAnswer:0,
-		upAnswer:0,
-		downAnswer:0,
-		rightAnswer:0,
+		leftAnswer:2,
+		upAnswer:4,
+		downAnswer:1,
+		rightAnswer:99
 	},
 
 	methods: {
 		left: function () {
-			this.result = this.rightOperand * this.leftOperand;
-			var that = this;
-			setTimeout(function () {
-				var leftRand = Math.floor(Math.random() * that.leftOperandArray.length);
-				var rightRand = Math.floor(Math.random() * that.rightOperandArray.length);
-				that.leftOperand = that.leftOperandArray[leftRand];
-				that.rightOperand = that.rightOperandArray[rightRand];
-				that.result = '?';
-			}, 1000);
+			if (this.leftOperandArray.length < 1) {
+				this.leftOperand = 0;
+				alert('Вы должны выбрать хотябы один число!');
+			} else {
+				this.result = this.rightOperand * this.leftOperand;
+				var that = this;
+				setTimeout(function () {
+					var leftRand = Math.floor(Math.random() * that.leftOperandArray.length);
+					var rightRand = Math.floor(Math.random() * that.rightOperandArray.length);
+					that.leftOperand = that.leftOperandArray[leftRand];
+					that.rightOperand = that.rightOperandArray[rightRand];
+					that.result = '?';
+				}, 1000);
+			}
 		},
 		up: function () {
 			this.result = this.rightOperand * this.leftOperand;
@@ -37,20 +42,23 @@ var app = new Vue({
 });
 
 window.addEventListener('keydown', function(event) {
-  switch (event.keyCode) {
-    case 37:
-      app.left();
-    break;
-    case 38:
-      app.up();
-    break;
-    case 39:
-      app.down();
-    break;
-    case 40:
-      app.right();
-    break;
-  }
+	switch (event.keyCode) {
+		case 37:
+			app.left();
+			var left = document.getElementById('left');
+			left.style.backgroundColor = 'green';
+			left.style.color = 'white';
+		break;
+		case 38:
+			app.up();
+		break;
+		case 39:
+			app.down();
+		break;
+		case 40:
+			app.right();
+		break;
+	}
 }, false);
 
 
