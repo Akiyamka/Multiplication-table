@@ -23,23 +23,30 @@ body{
 .forAll {
 	font-size: 5em;
 	font-weight: bold;
-
 }
-/* left operand */
-.leftOperand {
-	
+/* style for class answer */
+.answer {
+	border: 1px solid green;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 500px;
+	margin: 50px auto;
 }
-/* right operand */
-.rightOperand {
-	
+.item {
+	width: 130px;
+	height: 130px;
+	border: 1px solid #ccc;
 }
-/* operator */
-.operator {
+.item2 {
+	background-color: yellow;
 }
-/* operator equall*/
-.operatorEqually {
+.item4 {
+	background-color: green;
 }
-/* response */
-.result {
-	
+.item6 {
+	background-color: pink;
+}
+.item8 {
+	background-color: blue;
 }

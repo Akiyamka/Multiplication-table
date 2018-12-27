@@ -1,16 +1,28 @@
 var app = new Vue({
 	el: '#app',
 	data: {
-		rightOperandArray: [],
-		leftOperandArray: [],
-		rightOperand: 2,
+		leftOperandArray: [2],
+		rightOperandArray: [2,3,4,5,6,7,8,9],
+		rightOperand: 1,
 		leftOperand: 2,
-		result: '?'
+		result: '?',
+		leftAnswer:0,
+		upAnswer:0,
+		downAnswer:0,
+		rightAnswer:0,
 	},
 
 	methods: {
 		left: function () {
 			this.result = this.rightOperand * this.leftOperand;
+			var that = this;
+			setTimeout(function () {
+				var leftRand = Math.floor(Math.random() * that.leftOperandArray.length);
+				var rightRand = Math.floor(Math.random() * that.rightOperandArray.length);
+				that.leftOperand = that.leftOperandArray[leftRand];
+				that.rightOperand = that.rightOperandArray[rightRand];
+				that.result = '?';
+			}, 1000);
 		},
 		up: function () {
 			this.result = this.rightOperand * this.leftOperand;

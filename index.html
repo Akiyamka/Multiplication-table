@@ -25,12 +25,24 @@
 				<span class="result__span">{{ result }}</span>
 			</div>
 		</div>
-			<input type="checkbox" id="two" value="2" v-model="leftOperandArray">
+			<input type="checkbox" id="two" value="2" v-model.number="leftOperandArray">
 			<label for="two">2</label>
-			<input type="checkbox" id="three" value="3" v-model="rightOperandArray">
+			<input type="checkbox" id="three" value="3" v-model.number="leftOperandArray">
 			<label for="three">3</label>
-			<input type="checkbox" id="four" value="4" v-model="rightOperandArray">
+			<input type="checkbox" id="four" value="4" v-model.number="leftOperandArray">
 			<label for="four">4</label>
+			
+			<div class="answer">
+				<div class="item item1"></div>
+				<div class="item item2"></div>
+				<div class="item item3"></div>
+				<div class="item item4"></div>
+				<div class="item item5"></div>
+				<div class="item item6"></div>
+				<div class="item item7"></div>
+				<div class="item item8"></div>
+				<div class="item item9"></div>
+			</div>
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
