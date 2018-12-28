@@ -12,12 +12,15 @@ body{
 	color: #000;
 	font-family: 'Roboto', sans-serif, Arial, Verdana;
 }
-
-.main {
+#app {
+	position: relative;
+}
+.number {
 	display: flex;
 	justify-content: space-between;
 	width: 800px;
 	margin: 50px auto;
+	font-size: 1em;
 }
 /* left and rigth operand */
 .forAll {
@@ -25,6 +28,11 @@ body{
 	font-weight: bold;
 }
 /* style for class answer */
+.answer-container {
+	position: fixed;
+	left: 10px;
+	top: 20px;
+}
 .answer {
 	display: flex;
 	flex-wrap: wrap;

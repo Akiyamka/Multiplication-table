@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div id="app">
-		<div class="main">
+		<div class="number">
 			<div class="forAll leftOperand">
 				<span>{{ leftOperand }}</span>
 			</div>
@@ -25,16 +25,27 @@
 				<span class="result__span">{{ result }}</span>
 			</div>
 		</div>
-			<input type="checkbox" id="two" value="2" v-model.number="leftOperandArray">
-			<label for="two">2</label>
-			<input type="checkbox" id="three" value="3" v-model.number="leftOperandArray">
-			<label for="three">3</label>
-			<input type="checkbox" id="four" value="4" v-model.number="leftOperandArray">
-			<label for="four">4</label>
-			
+			<div class="answer-container">
+				<input type="checkbox" id="two" value="2" v-model.number="leftOperandArray">
+				<label for="two">2</label><br>
+				<input type="checkbox" id="three" value="3" v-model.number="leftOperandArray">
+				<label for="three">3</label><br>
+				<input type="checkbox" id="four" value="4" v-model.number="leftOperandArray">
+				<label for="four">4</label><br>
+				<input type="checkbox" id="four" value="5" v-model.number="leftOperandArray">
+				<label for="four">5</label><br>
+				<input type="checkbox" id="four" value="6" v-model.number="leftOperandArray">
+				<label for="four">6</label><br>
+				<input type="checkbox" id="four" value="7" v-model.number="leftOperandArray">
+				<label for="four">7</label><br>
+				<input type="checkbox" id="four" value="8" v-model.number="leftOperandArray">
+				<label for="four">8</label><br>
+				<input type="checkbox" id="four" value="9" v-model.number="leftOperandArray">
+				<label for="four">9</label><br>
+			</div>
 		<div class="answer">
 			<div class="item item1"></div>
-			<div class="item item2">
+			<div id="up" class="item item2">
 				<span>{{ upAnswer }}</span>
 			</div>
 			<div class="item item3"></div>
@@ -42,11 +53,11 @@
 				<span>{{ leftAnswer }}</span>
 			</div>
 			<div class="item item5"></div>
-			<div class="item item6">
+			<div id="right" class="item item6">
 				<span>{{ rightAnswer }}</span>
 			</div>
 			<div class="item item7"></div>
-			<div class="item item8">
+			<div id="down" class="item item8">
 				<span>{{ downAnswer }}</span>
 			</div>
 			<div class="item item9"></div>
