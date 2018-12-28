@@ -6,10 +6,10 @@ var app = new Vue({
 		rightOperand: 1,
 		leftOperand: 2,
 		result: '?',
-		leftAnswer:2,
-		upAnswer:4,
-		downAnswer:1,
-		rightAnswer:99
+		leftAnswer: Math.floor(Math.random() * 99),
+		upAnswer: Math.floor(Math.random() * 99),
+		downAnswer: Math.floor(Math.random() * 99),
+		rightAnswer: Math.floor(Math.random() * 99)
 	},
 
 	methods: {
@@ -25,6 +25,11 @@ var app = new Vue({
 					var rightRand = Math.floor(Math.random() * that.rightOperandArray.length);
 					that.leftOperand = that.leftOperandArray[leftRand];
 					that.rightOperand = that.rightOperandArray[rightRand];
+
+					that.leftAnswer = Math.floor(Math.random() * 99),
+					that.upAnswer = Math.floor(Math.random() * 99),
+					that.downAnswer = Math.floor(Math.random() * 99),
+					that.rightAnswer = Math.floor(Math.random() * 99)
 					that.result = '?';
 				}, 1000);
 			}
